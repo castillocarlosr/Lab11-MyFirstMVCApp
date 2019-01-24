@@ -1,0 +1,35 @@
+﻿body {background-color: lightblue;
+      border: 2em solid dotted red;
+      text-align: center;
+      margin: auto;
+}
+
+#front {
+    background: url('BlankTime.png');
+}
+
+div {
+    padding-top:250px;
+
+}
+h1{background-color:gold;
+   font-display:block;
+   font-size:x-large;
+   border:groove;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border:inset;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
