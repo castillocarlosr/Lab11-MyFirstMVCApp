@@ -1,0 +1,51 @@
+﻿@model List<MyFirstMVC.Models.TimePerson>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> RESULTS of YEARS </title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body id="results">
+    <h1>Search Results:</h1>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Honor</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>BirthYear</th>
+            <th>DeathYear</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Context</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Year</td>
+                <td>@item.Honor</td>
+                <td>@item.Name</td>
+                <td>>@item.Country</td>
+                <td>
+                    @if (item.BirthYear != 0)
+                    {
+                        @item.BirthYear;
+                    }
+                </td>
+                <td>
+                    @if (item.DeathYear != 0)
+                    {
+                        @item.DeathYear;
+                    }
+                </td>
+                <td>@item.Title</td>
+                <td>@item.Category</td>
+                <td>@item.Context</td>
+            </tr>
+        }
+    </table>
+    <img src="~/BlankTime.png" alt="A blank Time magazine" />
+</body>
+</html>

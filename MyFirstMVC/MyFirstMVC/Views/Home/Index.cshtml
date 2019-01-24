@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page TIME MAGAZINE</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body id="front">
+    <div>
+    <h1>Time</h1>
+    <h2>To see the Person of the year, please enter a Start and End year between 1927 and 2016</h2>
+    <form action="/" method="post">
+
+
+        <label for="startYear">Start Year</label>
+        <input id="startYear" type="number" min="1927" max="2016" placeholder="1927" maxlength="4" name="startYear" />
+        <label for="endYear">End Year</label>
+        <input id="endYear" type="number" min="1927" max="2016" placeholder="2016" maxlength="4" name="endYear" />
+
+        <button id="button" type="submit"> SEARCH </button>
+    </form>
+    </div>
+</body>
+</html>
+
