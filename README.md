@@ -4,7 +4,7 @@ started Jan.22, 2019
 ## Purpose:
 This is my first attempt at creating a working a basic MVC app using ASP.NET Core.
 
-##Summary
+## Summary
 This is to display a Time Magazine Person of the year and return results upon user input of years.
 
 ### How to run the program:
