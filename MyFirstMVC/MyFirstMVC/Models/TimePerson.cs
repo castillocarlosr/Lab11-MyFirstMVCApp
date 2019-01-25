@@ -20,15 +20,21 @@ namespace MyFirstMVC.Models
         
         public static List<TimePerson> GetPersons(int startYear, int endYear)
         {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../wwwroot/personOfTheYear.csv");
             List<TimePerson> people = new List<TimePerson>();
-            string path = Environment.CurrentDirectory;
-            string newPath = Path.GetFullPath(Path.Combine(path, @"C:\Users\casti\coding\codeFellows\code401\Lab11-MyFirstMVCApp\MyFirstMVC\MyFirstMVC\wwwroot\personOfTheYear.csv"));
 
-            string[] newFile = File.ReadAllLines(newPath);
+            //Below is old code from original submition.  Changed to new line code above.
+            //string path = AppContext.BaseDirectory;
+            //string path = Environment.CurrentDirectory;
+            //string newPath = Path.GetFullPath(Path.Combine(path, @"C:\Users\casti\coding\codeFellows\code401\Lab11-MyFirstMVCApp\MyFirstMVC\MyFirstMVC\wwwroot\personOfTheYear.csv"));
+            //FOund the line below after lab-class in slack.
+            //private static string newPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../wwwroot/personOfTheYear.csv");
+
+            string[] newFile = File.ReadAllLines(path);
              
             for (int i = 1; i < newFile.Length; i++)
             {
-                string[] field = newFile[i].Split(','); ;
+                string[] field = newFile[i].Split(','); 
 
                 people.Add(new TimePerson
                 {
